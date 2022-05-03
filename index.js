@@ -20,6 +20,7 @@ app.get("/",(req,res)=>{
     res.send("welcome to NodeJS");
 })
 
+
 app.listen(5000, () =>{
     console.log("Backend Server Running");
 });
