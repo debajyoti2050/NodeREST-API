@@ -7,7 +7,7 @@ router.get("/register", async (req,res) => {
     const user=await new User({
         username:"debajyoti",
         email:"debajyoti0007@gmail.com",
-        password:"12345678",
+        password:"12345678"
     })
 
     await user.save();
