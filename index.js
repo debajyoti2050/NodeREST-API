@@ -4,6 +4,8 @@ const mongoose=require("mongoose");
 const dotenv=require("dotenv");
 const helmet=require("helmet");
 const morgan=require("morgan");
+const userRoute=require("./routes/users")
+const authRoute=require("./routes/auth")
 
 dotenv.config();
 
@@ -17,8 +19,14 @@ app.use(helmet());
 app.use(morgan("common"));
 
 app.get("/",(req,res)=>{
-    res.send("welcome to NodeJS");
+    res.send("welcome to express");
 })
+app.get("/users",(req,res)=>{
+    res.send("welcome to user");
+})
+
+app.use("/api/users", userRoute);
+app.use("/api/auth", authRoute);
 
 app.listen(5000, () =>{
     console.log("Backend Server Running");
