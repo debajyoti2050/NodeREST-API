@@ -37,5 +37,5 @@ app.use("/api/posts",postRoute);
 
 
 app.listen(5000, () =>{
-    console.log("Backend Server Running");
+    console.log("Express Server Running");
 });
